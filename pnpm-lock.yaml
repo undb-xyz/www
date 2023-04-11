@@ -50,8 +50,8 @@ devDependencies:
     specifier: ^1.49.9
     version: 1.49.9
   svgo:
-    specifier: ^2.8.0
-    version: 2.8.0
+    specifier: ^3.0.0
+    version: 3.0.2
   tailwindcss:
     specifier: ^3.2.7
     version: 3.2.7(postcss@8.4.21)
