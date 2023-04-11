@@ -1,0 +1,58 @@
+---
+import { Icon } from 'astro-icon'
+
+const { src = '/undb.png' } = Astro.props
+---
+
+<section class="hero my-24">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+          <slot
+            ><span class="text-gradient">undb</span>
+            <br />
+            No code database.
+          </slot>
+        </h1>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+          <a class="button has-icon" href="https://github.com/undb-xyz/undb" target="_blank">
+            <Icon pack="ion" name="star" />
+            Star on GitHub
+          </a>
+          <a class="button has-icon color-secondary" href="https://docs.undb.xyz" target="_blank">
+            <Icon pack="ion" name="book-outline" />
+            Documentation
+          </a>
+        </div>
+      </div>
+      <div class="relative h-[100%]">
+        <img class="hidden lg:block object-cover w-[100%] h-[100%]" src={src} alt="" decoding="async" />
+        <a
+          class="button has-icon outline color-secondary absolute w-40 h-10 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+          href="https://demo.undb.xyz"
+          target="_blank"
+        >
+          <Icon pack="ion" name="cube-outline" />
+          Live Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
