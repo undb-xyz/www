@@ -58,6 +58,17 @@
     }
   }
 
+  &.color-white {
+    background-color: var(--neutral-100);
+    border-color: (var(--neutral-100));
+
+    &:hover,
+    &:focus {
+      background-color: var(--neutral-300);
+      border-color: var(--neutral-300);
+    }
+  }
+
   &.color-success {
     background-color: var(--success-400);
     border-color: (var(--success-400));
