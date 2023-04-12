@@ -1,22 +1,42 @@
 ---
-const { title, description, url, image, author } = Astro.props
+import { SEO } from 'astro-seo'
+
+interface Props {
+  title: string
+  description?: string
+  url?: string
+  image?: string
+  author?: string
+}
+
+const {
+  title,
+  description = 'undb - The open source no code database, airtable alternative.',
+  url,
+  image,
+} = Astro.props
 
 let subtitle = 'undb'
 ---
 
-<!-- general meta -->
-<meta name="title" content={title} />
-<meta name="description" content={description} />
-<meta name="author" content={author} />
-
-<!-- open graph -->
-<meta property="og:title" content={`${title} - ${subtitle}`} />
-<meta property="og:description" content={description} />
-<meta property="og:type" content="website" />
-<meta property="og:url" content={url} />
-<meta property="og:image" content={Astro.site ? `${Astro.site}${image}` : image} />
-
-<!-- twitter card -->
-
-<!-- page title -->
-<title>{title} - {subtitle}</title>
+<SEO
+  title={title}
+  titleTemplate={`%s - ${subtitle}`}
+  description={description}
+  openGraph={{
+    basic: {
+      title: `${title} - ${subtitle}`,
+      type: 'website',
+      image,
+      url,
+    },
+    optional: {
+      description,
+    },
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: 'icon', href: '/favicon.ico' }],
+    // extending the default meta tags
+  }}
+/>
