@@ -26,10 +26,10 @@ const { src = '/undb.png' } = Astro.props
           </a>
         </div>
       </div>
-      <div class="relative h-[120%] w-[150%]">
-        <img class="hidden lg:block object-cover w-[150%] h-[120%] blur-[2px]" src={src} alt="" decoding="async" />
+      <div class="hidden lg:block relative h-[120%] w-[150%]">
+        <img class="object-cover w-[150%] h-[120%] blur-[2px]" src={src} alt="" decoding="async" />
         <a
-          class="button has-icon outline color-white absolute w-40 h-10 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+          class="button has-icon outline color-white lg:absolute w-40 h-10 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
           href="https://demo.undb.xyz"
           target="_blank"
         >
