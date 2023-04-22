@@ -1,0 +1,44 @@
+---
+import AppFooter from "../components/AppFooter.astro";
+import AppHeader from "../components/AppHeader.astro";
+
+const {
+  title = "undb - The open source no code database",
+  description = "undb - The open source no code database, airtable alternative",
+  url,
+  image = "/social-preview-image.png",
+  author = "nichenqin",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name={description} content={description} />
+    <title>{title}</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <AppHeader />
+    <slot />
+    <AppFooter />
+  </body>
+</html>
+<style>
+  html {
+    font-family: Urbanist, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+  }
+</style>
