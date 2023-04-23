@@ -1,14 +1,15 @@
 ---
-import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro";
+import AppFooter from '../components/AppFooter.astro'
+import AppHeader from '../components/AppHeader.astro'
+import GA from '../components/GA.astro'
 
 const {
-  title = "undb - The open source no code database",
-  description = "undb - The open source no code database, airtable alternative",
+  title = 'undb - The open source no code database',
+  description = 'undb - The open source no code database, airtable alternative',
   url,
-  image = "/social-preview-image.png",
-  author = "nichenqin",
-} = Astro.props;
+  image = '/social-preview-image.png',
+  author = 'nichenqin',
+} = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -21,24 +22,22 @@ const {
     <meta name={description} content={description} />
     <title>{title}</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <GA />
+
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body class="bg-white dark:bg-gray-900">
     <AppHeader />
     <slot />
     <AppFooter />
-  </body>
-</html>
-<style>
-  html {
-    font-family: Urbanist, sans-serif;
-    scroll-behavior: smooth;
-  }
+  </body><style>
+    html {
+      font-family: Urbanist, sans-serif;
+      scroll-behavior: smooth;
+    }
 
-  body {
-    margin: 0;
-  }
-</style>
+    body {
+      margin: 0;
+    }
+  </style>
+</html>
