@@ -15,7 +15,7 @@ module.exports = {
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
-      primary: "#9333EA",
+      primary: "#1d4ed8",
       secondary: "#ff7e33",
       info: "#0C63E7",
       black: colors.black,
