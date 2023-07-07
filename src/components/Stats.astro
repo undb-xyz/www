@@ -1,16 +1,21 @@
 ---
-import Container from './Container.astro'
-import { Icon } from 'astro-icon'
-const { src = '/undb.png' } = Astro.props
+import Container from "./Container.astro";
+import { Icon } from "astro-icon";
+const { src = "/images/clients/undb-mac.png" } = Astro.props;
 ---
 
 <div id="demo">
   <Container>
     <div
-      class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center"
+      class="space-y-6 justify-between text-gray-600 lg:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center"
     >
-      <div class="md:7/12 lg:w-1/2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-sky-500">
+      <div class="md:7/12 lg:w-2/5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-6 h-6 text-sky-500"
+        >
           <path
             fill-rule="evenodd"
             d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z"
@@ -20,18 +25,23 @@ const { src = '/undb.png' } = Astro.props
             d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z"
             clip-rule="evenodd"></path>
         </svg>
-        <h2 class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white my-8">
+        <h2
+          class="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white my-8"
+        >
           Sincerely invite you to try Undb
         </h2>
         <p class="my-8 text-gray-600 dark:text-gray-300">
-          Undb is delighted to meet you all. We hope you can try it out and provide valuable feedback and suggestions. <br
-          />
-          <br /> Undb is currently in the early stages of open source development and is not recommended for production use.
-          Please note that once the demo website is redeployed, the previous table data will be cleared.
+          Undb is delighted to meet you all. We hope you can try it out and
+          provide valuable feedback and suggestions. <br />
+          <br /> Undb is currently in the early stages of open source development
+          and is not recommended for production use. Please note that once the demo
+          website is redeployed, the previous table data will be cleared.
         </p>
         <div class="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
           <div class="mt-8 flex gap-4 md:items-center">
-            <div class="w-12 h-12 flex gap-4 rounded-full bg-indigo-100 dark:bg-indigo-900/20">
+            <div
+              class="w-12 h-12 flex gap-4 rounded-full bg-indigo-100 dark:bg-indigo-900/20"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -87,16 +97,23 @@ const { src = '/undb.png' } = Astro.props
         </div> -->
         </div>
       </div>
-      <div class="md:5/12 lg:w-2/5">
-        <div class="lg:block relative h-[120%] w-[110%] mt-[40px]">
-          <img class="object-cover w-[150%] h-[120%] blur-[2px]" src={src} alt="" decoding="async" />
+      <div class="md:5/12 lg:w-3/5">
+        <div class="lg:block relative w-[100%] lg:w-[110%]">
+          <img
+            class="object-cover w-[160%] md:blur-[1px]"
+            src={src}
+            alt=""
+            decoding="async"
+          />
+
           <a
-            class="button has-icon outline color-white lg:absolute h-10 left-[50%] top-[50%] translate-x-[-40%] translate-y-[-50%] inline-flex items-center justify-start flex-nowrap p-2 rounded-sm border-black gap-2 leading-[32px] hover:scale-110 transition"
-            href="https://demo.undb.xyz"
-            target="_blank"
+            href="https://demo.undb.xyz/"
+            class="relative lg:absolute md:left-[50%] md:top-[50%] md:translate-x-[-50%] flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary/10 dark:before:border-gray-700 dark:before:bg-gray-800 md:before:bg-indigo-500/80 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 lg:w-max"
           >
-            <Icon pack="ion" name="cube-outline" class="w-5 h-5" />
-            <span class="whitespace-nowrap"> Live Demo</span>
+            <span
+              class="relative text-base font-semibold text-primary md:text-white dark:text-dark"
+              >Live Demo</span
+            >
           </a>
         </div>
       </div>
