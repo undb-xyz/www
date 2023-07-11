@@ -1,5 +1,6 @@
 ---
 import Container from './Container.astro'
+import { Image } from '@astrojs/image/components'
 import undb from '../assets/img/undb-mac.svg'
 ---
 
@@ -81,7 +82,7 @@ import undb from '../assets/img/undb-mac.svg'
       </div>
       <div class="md:5/12 lg:w-3/5">
         <div class="lg:block relative w-[100%] lg:w-[110%]">
-          <img src={undb} alt="WebP Image" />
+          <Image src={undb} alt="WebP Image" aspectRatio={16 / 9} format="svg" fit="fill" />
 
           <a
             href="https://demo.undb.xyz/"
